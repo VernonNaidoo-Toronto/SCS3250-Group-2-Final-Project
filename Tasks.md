@@ -15,7 +15,11 @@ MS: Weather Data:
 
 BY: Correlation (boardings vs temp/precip).
 
-JJ: Aggregate hourly transit data. Need daily totals.
+JJ: 
+- Aggregate hourly transit data. Need daily totals.
+- Get mean monthly temperature 
+- Get the delta between daily temperature adn mean monthly temperature
+- Plot the delta in relation to the daily total
 
 VN: Add station data
 - Load, clean, merge into boardings.
