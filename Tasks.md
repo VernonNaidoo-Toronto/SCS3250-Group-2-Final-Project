@@ -12,6 +12,7 @@ MS: Weather Data:
 - Replace NaNs (nulls).
 - Change Flags to boolean.
 - Merge the two DataFrames.
+- Plot daily ridership with daily weather
 
 BY: 
 - Correlation (boardings vs temp/precip).
