@@ -13,7 +13,9 @@ MS: Weather Data:
 - Change Flags to boolean.
 - Merge the two DataFrames.
 
-BY: Correlation (boardings vs temp/precip).
+BY: 
+- Correlation (boardings vs temp/precip).
+- Removing outliers
 
 JJ: 
 - Aggregate hourly transit data. Need daily totals.
@@ -23,6 +25,7 @@ JJ:
 
 VN: Add station data
 - Load, clean, merge into boardings.
+- Investigate prediction
 
 
 Final Dataset:
@@ -39,6 +42,10 @@ Final Dataset:
   - Daily Precipitation - MS
   - Monthly Precipitation (mean of daily precipitation) - JJ
   - Snow on Ground - MS
+  - Day
+  - Week 
+  - Month
+  - Column per GO line (aggregate daily ridership)
   
 Ideas for data:
 - Good/Bad Weather Days
