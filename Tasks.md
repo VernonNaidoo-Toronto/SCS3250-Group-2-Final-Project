@@ -17,6 +17,7 @@ MS: Weather Data:
 BY: 
 - Correlation (boardings vs temp/precip).
 - Removing outliers
+  - Identify weekends and holidays (potentially as a column)
 
 JJ: 
 - Aggregate hourly transit data. Need daily totals.
