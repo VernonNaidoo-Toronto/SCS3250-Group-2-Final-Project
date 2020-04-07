@@ -45,8 +45,9 @@ Final Dataset:
   - Monthly Precipitation (mean of daily precipitation) - JJ
   - Snow on Ground - MS
   - Day
-  - Week 
+  - Weekday
   - Month
+  - Year
   - Column per GO line (aggregate daily ridership)
   
 Ideas for data:
