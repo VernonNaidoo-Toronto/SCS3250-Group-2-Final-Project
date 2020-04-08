@@ -53,3 +53,7 @@ Final Dataset:
 Ideas for data:
 - Good/Bad Weather Days
   - Ex. Good/ Bad temp (releative to monthly mean temp) + precipitation
+
+Report:
+- VN writing about GO data
+- MS writing about Weather data
