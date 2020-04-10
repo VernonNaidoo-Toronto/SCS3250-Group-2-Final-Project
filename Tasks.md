@@ -24,6 +24,7 @@ JJ:
 - Get mean monthly temperature 
 - Get the delta between daily temperature and mean monthly temperature
 - Plot the delta in relation to the daily total
+- Change ridership to int
 
 VN: Add station data
 - Load, clean, merge into boardings.
@@ -49,6 +50,7 @@ Final Dataset:
   - Month
   - Year
   - Column per GO line (aggregate daily ridership)
+  - Total GO ridership
   
 Ideas for data:
 - Good/Bad Weather Days
