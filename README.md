@@ -61,22 +61,26 @@ The second dataset is weather data from the Government of Canada (acquired from:
 ---
 ## Phase 2: Analysis
 
-- [ ] Correlation
-- [ ] Autocorrelation
+- [ ] Correlation - BW/VN
+- [ ] Autocorrelation - BW/VN
 
 [ANALYSIS (Jupyter Notebook Link)](https://github.com/Jenarth/SCS3250-Group-2-Final-Project/blob/master/2_Analysis.ipynb)
 
 ---
 ## Phase 3: Machine Learning
 
-- [ ] Classification (kNN)
-- [ ] Regression
+- [ ] Classification (kNN) - MS
+- [ ] Regression - LW
 
 [MACHINE LEARNING (Jupyter Notebook Link)](https://github.com/Jenarth/SCS3250-Group-2-Final-Project/blob/master/3_Machine_Learning.ipynb)
 
 ---
 ## Conclusion
-
-- [ ] Overall thoughts
-- [ ] Successes, failures, dead ends
+- Lessons Learned
+    - [ ] Preparation and Cleaning
+    - [ ] 2
+    - [ ] 3
 - [ ] Ideas for further study
+    - [ ] Preparation and Cleaning
+    - [ ] 2
+    - [ ] 3
