@@ -235,9 +235,17 @@ Using sklearn, the team built a good, reliable model, demonstrating that passeng
 
 #### <a name="lessons_preparation">Preparation and Cleaning</a>
 
-Significant time and effort must be devoted to the work of preparing, cleaning, merging and enhancing the data in advance of further analysis.  Failure to dedicate adequate resources  (early in the project and all the way through) can cause considerable rework and refactoring.  Part way through the project, we came to the realization that each of us had modified the dataset for our own dedicated work (autocorrelation, classification, regression, etc.) in similar ways.  We decided to refactor and standardize the enhancements, such as the addition of new boolean columns for "Holidays" and "Outliers", the consolidation of the 68 train stations into eight train lines and...
+Significant time and effort must be devoted to the work of preparing, cleaning, merging and enhancing the data in advance of further analysis.  Failure to dedicate adequate resources  (early in the project and all the way through) can cause considerable rework and refactoring.  Part way through the project, we came to the realization that each of us had modified the dataset for our own dedicated work (autocorrelation, classification, regression, etc.) in similar ways.  We agreed to refactor and standardize the enhancements, such as:
+* Addition of "Holidays" boolean column (statutory holidays and common vacation periods)
+* Addition of "Outliers" boolean column (data points more than two standard deviations from the mean, as calculated within seasonality subsets)
+* Consolidation of the 68 train stations into eight train lines
+* Creation of a central "Final Dataset.csv" as the interface point between Preparation and Cleaning and all other work
 
-The benefits included improved reliability for all downstream analysis, a reduction in the complexity and volume of code and a centralized location for preparation and cleaning.
+Benefits included:
+* Improved reliability for all downstream analysis results
+* Reduction in the complexity and volume of code
+* Centralization of all preparation and cleaning work, which had become fragmented
+* Consistency of downstream analysis results, thanks to common consolidated and cleansed data file with flags for optional exclusion of unwanted data (holidays and outliers)
 
 #### <a name="lessons_analysis">Analysis</a>
 
@@ -257,8 +265,9 @@ The benefits included improved reliability for all downstream analysis, a reduct
 
 ### Ideas for Further Study / Next Steps
 
-#### <a name="next_steps_preparation">Preparation and Cleaning - VN</a>
-[TEXT NEEDED]
+#### <a name="next_steps_preparation">Preparation and Cleaning</a>
+* Secure agreement (or employment) with Metrolinx to gain access to unaltered datasets with true values and additional features.
+
 
 #### <a name="next_steps_analysis">Analysis - BW/VN</a>
 [TEXT NEEDED]
