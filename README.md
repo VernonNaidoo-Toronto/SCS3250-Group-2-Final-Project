@@ -28,7 +28,7 @@
 
 ### Overview
 
-The Greater Toronto Area relies on Metrolinx's GO Transit as a major transportation network to move it's population throughout the GTA. The backbone of this network is the GO train system that moves people to and from Union Station in downtown Toronto. In this project, GO train ridership is observed and studied to look for trends, correlations and patterns. With the addition of weather data such as temperature, precipitation and amount of snow in the City of Toronto, the project aims to find the relationship between GO ridership and weather. Using these relationships, the project attempts to build machine learning models that can be used to predict GO ridership using weather.
+The Greater Toronto Area relies on Metrolinx's GO Transit as a major transportation network to move its population throughout the GTA. The backbone of this network is the GO train system that moves people to and from Union Station in downtown Toronto. In this project, GO train ridership is observed and studied to look for trends, correlations and patterns. With the addition of weather data such as temperature, precipitation and amount of snow in the City of Toronto, the project aims to find the relationship between GO ridership and weather. Using these relationships, the project attempts to build machine learning models that can be used to predict GO ridership using weather.
 
 ### Goals
 
@@ -43,7 +43,7 @@ The Greater Toronto Area relies on Metrolinx's GO Transit as a major transportat
     - Outliers are present in the data that can skew results
     - Weekends have significantly different trends than weekdays
     - Holidays affect GO ridership
-    - Major events in Toronto have affects on GO ridership
+    - Major events in Toronto have effects on GO ridership
     - These outliers need to be addressed before doing analysis
 - Find trends in the GO ridership data
     - Visualizations will be created to better understand the data and trends
@@ -225,8 +225,10 @@ The benefits included improved reliability for all downstream analysis, a reduct
 1. Harness useful pandas libraries like Scikit-Learn to create effective prediction models easily.
 2. Analyzing and experimenting with a given dataset to extract the most relevant and effective columns for a knn predict model.
 3. How to modify a given dataset to ensure it works with a knn predict model, e.g. categorical values cannot be used as attributes.
-#### Machine Learning - Regression - JJ / LW
-[TEXT NEEDED]
+#### Machine Learning - Regression
+* Our first model, using only a month of data and without relying on the outliers/holidays (January having 1 bank holiday) was lacking precision. Even though removing outliers/holidays was assiduous, it was essential in order to obtain a better model.
+* When our team started this project, our initial assumption was that riderships during weekdays would be greatly impacted by weather conditions. We assumed that people going to work would adapt their behaviour to the weather, and we were wrong. It was great to see that analyzing data can contradict initial thought and lead to more informed decisions.
+
 
 ### Ideas for Further Study / Next Steps
 
@@ -240,5 +242,7 @@ The benefits included improved reliability for all downstream analysis, a reduct
 1. Experiment with different distance methods besides Euclidean, which is what Scikit-Learn uses.
 2. Tune the hyperparameters to improve the model performance
 3. Rescale the attributes using StandardScalar.
-#### Machine Learning - Regression - JJ / LW
-[TEXT NEEDED]
+
+#### Machine Learning - Regression
+* The entire team was curious to know how passenger volumes could be affected during a weather disruption: if it suddenly rains in a summer weekend, would we be able to observe a peak in ridership? To do this analysis, an additional output would be required from the Preparation and Cleaning phase.  We would need to retain the hourly details for both transit and weather and devise a new structure for the analysis.
+* With more granular data, we would also have been able to look at the impact some cultural/social events can have on riderships: Can we predict the peak in riderships the nights the Toronto Raptors are playing?
