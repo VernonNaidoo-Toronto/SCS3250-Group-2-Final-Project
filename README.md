@@ -16,7 +16,7 @@
 
 ### Table of Contents:
 
-* [Introduction](https://jenarth.github.io/SCS3250-Group-2-Final-Project#introduction)
+* [Introduction](#introduction)
 * [Phase 1: Data Preparation and Cleaning](https://jenarth.github.io/SCS3250-Group-2-Final-Project#phase-1-data-preparation-and-cleaning)
 * [Phase 2: Analysis](https://jenarth.github.io/SCS3250-Group-2-Final-Project#phase-2-analysis)
 * [Phase 3: Machine Learning](https://jenarth.github.io/SCS3250-Group-2-Final-Project#phase-3-machine-learning)
