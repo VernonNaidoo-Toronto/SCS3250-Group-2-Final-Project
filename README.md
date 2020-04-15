@@ -260,7 +260,7 @@ Benefits included:
 1. Harness useful pandas libraries like Scikit-Learn to create effective prediction models easily.
 2. Analyzing and experimenting with a given dataset to extract the most relevant and effective columns for a knn predict model.
 3. How to modify a given dataset to ensure it works with a kNN predict model, e.g. categorical values cannot be used as attributes.
-#### <a name="lessons_regression">Machine Learning - Regression</a>
+#### Machine Learning - Regression
 * Our first model, using only a month of data and without relying on the outliers/holidays (January having 1 bank holiday) was lacking precision. Even though removing outliers/holidays was assiduous, it was essential in order to obtain a better model.
 * When our team started this project, our initial assumption was that ridership during weekdays would be greatly impacted by weather conditions. We assumed that people going to work would adapt their behaviour to the weather, and we were wrong. It was great to see that analyzing data can contradict initial thought and lead to more informed decisions.
 
