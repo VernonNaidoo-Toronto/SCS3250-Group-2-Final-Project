@@ -250,9 +250,10 @@ Benefits included:
 #### <a name="lessons_analysis">Analysis</a>
 
 1. Correlation and autocorrelation are good tools to help us show the quality and characteristics of data.  They also help to drive the choice of machine learning algorithms to use.
-2. How to use Panda, scatter matrix
-3. How to visualize data matplotlib, an autocorrelation plot and pcolor
-4. How to analyze the autocorrelation function for a time series and identifying the correlation from scatter plot
+2. Effective use of the pandas library for building a scatter matrix
+3. Efficient techniques for generating complex statistical analysis visualiations of data, using matplotlib, autocorrelation plots and pcolor pseudocolor plots
+4. Time series analysis, using the autocorrelation function
+5. Visual approaches for using scatter plots to detect and quantify correlations between pairs of time series variables in a matrix
 
 #### <a name="lessons_classification">Machine Learning - Classification</a>
 1. Harness useful pandas libraries like Scikit-Learn to create effective prediction models easily.
@@ -273,7 +274,7 @@ Benefits included:
 
 #### <a name="next_steps_analysis">Analysis</a>
 * Recreate the autocorrelation analysis from first principles to gain a deeper understanding of the result.
-* Assess the real-world relevance of correlation between variables.  (Why correlate temperature and precipitation?)
+* Assess the real-world relevance of correlation between variables.  (Is there value in correlating temperature and precipitation or are we exposing simple laws of physics?  How can these be filtered out?)
 * Find a way to identify the exact intersection between the autocorrelation line and the confidence interval boundaries.
 
 #### <a name="next_steps_classification">Machine Learning - Classification</a>
