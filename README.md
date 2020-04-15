@@ -37,13 +37,13 @@
 * [Conclusion](#conclusion)
     * [Lessons Learned](#lessons-learned)
         * [Preparation and Cleaning](#lessons_preparation)
-        * [Analysis](#lessons_analysis)
+        * [Analysis](#analysis)
         * [Machine Learning - Classification](#lessons_classification)
         * [Machine Learning - Regression](#lessons_regression)
         
     * [Ideas for Further Study / Next Steps](#ideas-for-further-study--next-steps)
         * [Preparation and Cleaning](#next_steps_preparation)
-        * [Analysis](#next_steps_analysis)
+        * [Analysis](#analysis-1)
         * [Machine Learning - Classification](#next_steps_classification)
         * [Machine Learning - Regression](#next_steps_regression)
         
@@ -246,8 +246,8 @@ Benefits included:
 * Reduction in the complexity and volume of code
 * Centralization of all preparation and cleaning work, which had become fragmented
 * Consistency of downstream analysis results, thanks to common consolidated and cleansed data file with flags for optional exclusion of unwanted data (holidays and outliers)
+#### Analysis
 
-#### <a name="lessons_analysis">Analysis</a>
 
 1. Correlation and autocorrelation are good tools to help us show the quality and characteristics of data.  They also help to drive the choice of machine learning algorithms to use.
 2. Effective use of the pandas library for building a scatter matrix
