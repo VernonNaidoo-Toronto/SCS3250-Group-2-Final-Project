@@ -133,7 +133,10 @@ The second dataset is weather data from the Government of Canada (acquired from:
 ## Phase 2: Analysis
 
 - [ ] Correlation - BW/VN
+[TEXT NEEDED]
+
 - [ ] Autocorrelation - BW/VN
+[TEXT NEEDED]
 
 [ANALYSIS (Jupyter Notebook Link)](https://github.com/Jenarth/SCS3250-Group-2-Final-Project/blob/master/2_Analysis.ipynb)
 
@@ -142,7 +145,7 @@ The second dataset is weather data from the Government of Canada (acquired from:
 
 ### Classification, using k-Nearest Neighbours (kNN)
 
->The primary objective of this exercise was to understand if it was possible to identify a pattern between the weather data and daily ridership. Given a day with known weather data, i.e. precipitation, temperature, day and weekday, could we predict the expected ridership on that day? Knn provided us a simple and efficient way to do this prediction.
+The primary objective of this exercise was to understand if it was possible to identify a pattern between the weather data and daily ridership. Given a day with known weather data, i.e. precipitation, temperature, day and weekday, could we predict the expected ridership on that day? Knn provided us a simple and efficient way to do this prediction.
 
 #### Pros
 
@@ -199,19 +202,27 @@ Significant time and effort must be devoted to the work of preparing, cleaning, 
 
 The benefits included improved reliability for all downstream analysis, a reduction in the complexity and volume of code and a centralized location for preparation and cleaning.
 
-#### Analysis
+#### Analysis - BW/VN
+[TEXT NEEDED]
+
 #### Machine Learning - Classification
 1. Harness useful pandas libraries like Scikit-Learn to create effective prediction models easily.
 2. Analyzing and experimenting with a given dataset to extract the most relevant and effective columns for a knn predict model.
 3. How to modify a given dataset to ensure it works with a knn predict model, e.g. categorical values cannot be used as attributes.
-#### Machine Learning - Regression
+#### Machine Learning - Regression - JJ / LW
+[TEXT NEEDED]
 
 ### Ideas for Further Study / Next Steps
 
-#### Preparation and Cleaning
-#### Analysis
+#### Preparation and Cleaning - VN
+[TEXT NEEDED]
+
+#### Analysis - BW/VN
+[TEXT NEEDED]
+
 #### Machine Learning - Classification
 1. Experiment with different distance methods besides Euclidean, which is what Scikit-Learn uses.
 2. Tune the hyperparameters to improve the model performance
 3. Rescale the attributes using StandardScalar.
-#### Machine Learning - Regression
+#### Machine Learning - Regression - JJ / LW
+[TEXT NEEDED]
