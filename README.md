@@ -132,11 +132,23 @@ The second dataset is weather data from the Government of Canada (acquired from:
 ---
 ## Phase 2: Analysis
 
-- [ ] Correlation - BW/VN
-[TEXT NEEDED]
+### Challenges Encountered: 
+There are 29 variables out of those variables to choose the right ones to analyze correlations and autocorrelations.
+Analyzing the relationships among the same variables in different time frames. For this to create many different time frames.
 
-- [ ] Autocorrelation - BW/VN
-[TEXT NEEDED]
+### Correlation:
+
+* The primary objective of this part was to understand if there were any association between weather data and ridership. 
+* Our dataset was already cleaned and is extracted outliers and public holidays. 
+* After analyzing our dataset, the most interesting feature is when we can see a positive relationship between the mean temperature and the number of riderships using Union Station just on the weekend, however, there is not any relationship between these two variables on weekdays. 
+* Also, total precipitation and average temperature have weak positive correlations.
+ 
+### Autocorrelation:
+
+* The primary objective of this part was to understand if there is any pattern in a single variable as it changes over time.
+* Our dataset was already cleaned and is extracted outliers and public holidays. 
+* After analyzing our dataset, the graph shows us that choosing variables are autocorrelated daily but when limiting the time frame as monthly autocorrelation is getting smaller even we can not see any autocorrelation which shows us the choosing variable becomes random.
+* Also, the graphs show us when time moves further away it can be seen less of autocorrelation.
 
 [ANALYSIS (Jupyter Notebook Link)](https://github.com/Jenarth/SCS3250-Group-2-Final-Project/blob/master/2_Analysis.ipynb)
 
@@ -202,8 +214,12 @@ Significant time and effort must be devoted to the work of preparing, cleaning, 
 
 The benefits included improved reliability for all downstream analysis, a reduction in the complexity and volume of code and a centralized location for preparation and cleaning.
 
-#### Analysis - BW/VN
-[TEXT NEEDED]
+#### Analysis
+
+1. Correlation and autocorrelation are good tools to help us show the quality and characteristics of data.  They also help to drive the choice of machine learning algorithms to use.
+2. How to use Panda, scatter matrix
+3. How to visualize data matplotlib, an autocorrelation plot and pcolor
+4. How to analyze the autocorrelation function for a time series and identifying the correlation from scatter plot
 
 #### Machine Learning - Classification
 1. Harness useful pandas libraries like Scikit-Learn to create effective prediction models easily.
