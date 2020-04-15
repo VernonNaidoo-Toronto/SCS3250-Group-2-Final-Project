@@ -197,7 +197,7 @@ This deeper analysis of the data seemed to demonstrate that the model could be l
 
 In the 4th part of the analysis, we started by exploring the correlation between weekday riderships and weekday temperatures. We did not find any clear correlation between those two sets of data. Our conclusion is that it is more than likely that people going to work on weekdays have the same routine and therefore use the same method of transportation regardless of the weather conditions. 
 When we analyzed the data for the weekends, it was clear that there was a positive correlation between weekends temperatures and GO riderships. 
-Using sklearn, the team built a reliable and good model demonstrating that there is an increase of riderships as temperatures arise only during weekends.
+Using sklearn, the team built a good, reliable model, demonstrating that passenger volumes increase as temperatures rise, but only during weekends.
 
 
 [MACHINE LEARNING (Jupyter Notebook Link)](https://github.com/Jenarth/SCS3250-Group-2-Final-Project/blob/master/3_Machine_Learning.ipynb)
