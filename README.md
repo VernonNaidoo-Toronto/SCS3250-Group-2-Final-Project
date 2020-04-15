@@ -36,16 +36,16 @@
     
 * [Conclusion](#conclusion)
     * [Lessons Learned](#lessons-learned)
-        * [Preparation and Cleaning](#lessons_preparation)
+        * [Preparation and Cleaning](#preparation-and-cleaning)
         * [Analysis](#analysis)
-        * [Machine Learning - Classification](#lessons_classification)
-        * [Machine Learning - Regression](#lessons_regression)
+        * [Machine Learning - Classification](#machine-learning---classification-1)
+        * [Machine Learning - Regression](#machine-learning---regression)
         
     * [Ideas for Further Study / Next Steps](#ideas-for-further-study--next-steps)
-        * [Preparation and Cleaning](#next_steps_preparation)
+        * [Preparation and Cleaning](#preparation-and-cleaning-1)
         * [Analysis](#analysis-1)
-        * [Machine Learning - Classification](#next_steps_classification)
-        * [Machine Learning - Regression](#next_steps_regression)
+        * [Machine Learning - Classification](#machine-learning---classification-1)
+        * [Machine Learning - Regression](#machine-learning---regression-1)
         
 ---
 
@@ -231,9 +231,9 @@ Using sklearn, the team built a good, reliable model, demonstrating that passeng
 
 ## Conclusion
 
-### Lessons Learned</a>
+### Lessons Learned
 
-#### <a name="lessons_preparation">Preparation and Cleaning</a>
+#### Preparation and Cleaning
 
 Significant time and effort must be devoted to the work of preparing, cleaning, merging and enhancing the data in advance of further analysis.  Failure to dedicate adequate resources  (early in the project and all the way through) can cause considerable rework and refactoring.  Part way through the project, we came to the realization that each of us had modified the dataset for our own dedicated work (autocorrelation, classification, regression, etc.) in similar ways.  We agreed to refactor and standardize the enhancements, such as:
 * Addition of "Holidays" boolean column (statutory holidays and common vacation periods)
@@ -246,8 +246,8 @@ Benefits included:
 * Reduction in the complexity and volume of code
 * Centralization of all preparation and cleaning work, which had become fragmented
 * Consistency of downstream analysis results, thanks to common consolidated and cleansed data file with flags for optional exclusion of unwanted data (holidays and outliers)
-#### Analysis
 
+#### Analysis
 
 1. Correlation and autocorrelation are good tools to help us show the quality and characteristics of data.  They also help to drive the choice of machine learning algorithms to use.
 2. Effective use of the pandas library for building a scatter matrix
@@ -255,7 +255,8 @@ Benefits included:
 4. Time series analysis, using the autocorrelation function
 5. Visual approaches for using scatter plots to detect and quantify correlations between pairs of time series variables in a matrix
 
-#### <a name="lessons_classification">Machine Learning - Classification</a>
+#### Machine Learning - Classification
+
 1. Harness useful pandas libraries like Scikit-Learn to create effective prediction models easily.
 2. Analyzing and experimenting with a given dataset to extract the most relevant and effective columns for a knn predict model.
 3. How to modify a given dataset to ensure it works with a kNN predict model, e.g. categorical values cannot be used as attributes.
@@ -266,22 +267,22 @@ Benefits included:
 
 ### Ideas for Further Study / Next Steps
 
-#### <a name="next_steps_preparation">Preparation and Cleaning</a>
+#### Preparation and Cleaning
 * Secure agreement (or employment) with Metrolinx to gain access to unaltered datasets with true values and additional features.
 * Create a second "final" dataset with an alternate shape to enable intraday analysis.  Transit data would need to retain hourly detail.  New weather data files with hourly granularity would need to be sourced.  The analysis would expose an additional level of "hourly seasonality" and enable classification and regression to identify peak periods.
 * Compare actual hourly passenger volumes to **scheduled** train capacity (**planned** arrival times, train length, seat count) to identify service planning optimization opportunities.
 * Comparing actual hourly passenger volumes to **actual** train capacity (**recorded** arrival times, train length, seat count) could reveal opportunities for optimizing service delivery.
 
-#### <a name="next_steps_analysis">Analysis</a>
+#### Analysis
 * Recreate the autocorrelation analysis from first principles to gain a deeper understanding of the result.
 * Assess the real-world relevance of correlation between variables.  (Is there value in correlating temperature and precipitation or are we exposing simple laws of physics?  How can these be filtered out?)
 * Find a way to identify the exact intersection between the autocorrelation line and the confidence interval boundaries.
 
-#### <a name="next_steps_classification">Machine Learning - Classification</a>
+#### Machine Learning - Classification
 1. Experiment with different distance methods besides Euclidean, which is what Scikit-Learn uses.
 2. Tune the hyperparameters to improve the model performance.
 3. Rescale the attributes using StandardScalar.
 
-#### <a name="next_steps_regression">Machine Learning - Regression</a>
+#### Machine Learning - Regression
 * The entire team was curious to know how passenger volumes could be affected during a weather disruption: if it suddenly rains in a summer weekend, would we be able to observe a peak in ridership? To do this analysis, an additional output would be required from the Preparation and Cleaning phase.  We would need to retain the hourly details for both transit and weather and devise a new structure for the analysis.
 * With more granular data, we would also have been able to look at the impact some cultural/social events can have on passenger volumes: Can we predict the peak in ridership the nights the Toronto Raptors are playing?
