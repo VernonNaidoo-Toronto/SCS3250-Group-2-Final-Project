@@ -140,7 +140,7 @@ The second dataset is weather data from the Government of Canada (acquired from:
 ---
 ## Phase 3: Machine Learning
 
-### Classification, Using K-Nearest Neighbours (kNN)
+### Classification, using k-Nearest Neighbours (kNN)
 
 >The primary objective of this exercise was to understand if it was possible to identify a pattern between the weather data and daily ridership. Given a day with known weather data, i.e. precipitation, temperature, day and weekday, could we predict the expected ridership on that day? Knn provided us a simple and efficient way to do this prediction.
 
