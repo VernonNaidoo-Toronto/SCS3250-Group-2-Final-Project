@@ -17,11 +17,36 @@
 ### Table of Contents:
 
 * [Introduction](#introduction)
+    * [Overview](#overview)
+    * [Goals](#goals)
+    * [Hypotheses](#hypotheses)
+    
 * [Phase 1: Data Preparation and Cleaning](#phase-1-data-preparation-and-cleaning)
+    * [Datasets](#datasets)
+    * [Task Overview](#task-overview)
+    
 * [Phase 2: Analysis](#phase-2-analysis)
+    * [Challenges Encountered](#challenges-encountered)
+    * [Correlation](#correlation)
+    * [Autocorrelation](#autocorrelation) 
+    
 * [Phase 3: Machine Learning](#phase-3-machine-learning)
+    * [Classification, using k-Nearest Neighbours (kNN)](#classification-using-k-nearest-neighbours-knn)
+    * [Linear Regression](#linear-regression)
+    
 * [Conclusion](#conclusion)
-
+    * [Lessons Learned](#lessons-learned)
+        * [Preparation and Cleaning](#lessons_preparation)
+        * [Analysis](#lessons_analysis)
+        * [Machine Learning - Classification](#lessons_classification)
+        * [Machine Learning - Regression](#lessons_regression)
+        
+    * [Ideas for Further Study / Next Steps](#ideas-for-further-study--next-steps)
+        * [Preparation and Cleaning](#next_steps_preparation)
+        * [Analysis](#next_steps_analysis)
+        * [Machine Learning - Classification](#next_steps_classification)
+        * [Machine Learning - Regression](#next_steps_regression)
+        
 ---
 
 ## Introduction
@@ -71,7 +96,7 @@ The Greater Toronto Area relies on Metrolinx's GO Transit as a major transportat
 ---
 ## Phase 1: Data Preparation and Cleaning
 
-### Datasets:
+### Datasets
 
 #### 1: GO Train Rider Volumes
 
@@ -132,18 +157,18 @@ The second dataset is weather data from the Government of Canada (acquired from:
 ---
 ## Phase 2: Analysis
 
-### Challenges Encountered: 
+### Challenges Encountered
 There are 29 variables out of those variables to choose the right ones to analyze correlations and autocorrelations.
 Analyzing the relationships among the same variables in different time frames. For this to create many different time frames.
 
-### Correlation:
+### Correlation
 
 * The primary objective of this part was to understand if there were any association between weather data and ridership. 
 * Our dataset was already cleaned and is extracted outliers and public holidays. 
 * After analyzing our dataset, the most interesting feature is when we can see a positive relationship between the mean temperature and the number of riderships using Union Station just on the weekend, however, there is not any relationship between these two variables on weekdays. 
 * Also, total precipitation and average temperature have weak positive correlations.
  
-### Autocorrelation:
+### Autocorrelation
 
 * The primary objective of this part was to understand if there is any pattern in a single variable as it changes over time.
 * Our dataset was already cleaned and is extracted outliers and public holidays. 
@@ -206,43 +231,43 @@ Using sklearn, the team built a good, reliable model, demonstrating that passeng
 
 ## Conclusion
 
-### Lessons Learned
+### Lessons Learned</a>
 
-#### Preparation and Cleaning
+#### <a name="lessons_preparation">Preparation and Cleaning</a>
 
 Significant time and effort must be devoted to the work of preparing, cleaning, merging and enhancing the data in advance of further analysis.  Failure to dedicate adequate resources  (early in the project and all the way through) can cause considerable rework and refactoring.  Part way through the project, we came to the realization that each of us had modified the dataset for our own dedicated work (autocorrelation, classification, regression, etc.) in similar ways.  We decided to refactor and standardize the enhancements, such as the addition of new boolean columns for "Holidays" and "Outliers", the consolidation of the 68 train stations into eight train lines and...
 
 The benefits included improved reliability for all downstream analysis, a reduction in the complexity and volume of code and a centralized location for preparation and cleaning.
 
-#### Analysis
+#### <a name="lessons_analysis">Analysis</a>
 
 1. Correlation and autocorrelation are good tools to help us show the quality and characteristics of data.  They also help to drive the choice of machine learning algorithms to use.
 2. How to use Panda, scatter matrix
 3. How to visualize data matplotlib, an autocorrelation plot and pcolor
 4. How to analyze the autocorrelation function for a time series and identifying the correlation from scatter plot
 
-#### Machine Learning - Classification
+#### <a name="lessons_classification">Machine Learning - Classification</a>
 1. Harness useful pandas libraries like Scikit-Learn to create effective prediction models easily.
 2. Analyzing and experimenting with a given dataset to extract the most relevant and effective columns for a knn predict model.
 3. How to modify a given dataset to ensure it works with a knn predict model, e.g. categorical values cannot be used as attributes.
-#### Machine Learning - Regression
+#### <a name="lessons_regression">Machine Learning - Regression</a>
 * Our first model, using only a month of data and without relying on the outliers/holidays (January having 1 bank holiday) was lacking precision. Even though removing outliers/holidays was assiduous, it was essential in order to obtain a better model.
 * When our team started this project, our initial assumption was that riderships during weekdays would be greatly impacted by weather conditions. We assumed that people going to work would adapt their behaviour to the weather, and we were wrong. It was great to see that analyzing data can contradict initial thought and lead to more informed decisions.
 
 
 ### Ideas for Further Study / Next Steps
 
-#### Preparation and Cleaning - VN
+#### <a name="next_steps_preparation">Preparation and Cleaning - VN</a>
 [TEXT NEEDED]
 
-#### Analysis - BW/VN
+#### <a name="next_steps_analysis">Analysis - BW/VN</a>
 [TEXT NEEDED]
 
-#### Machine Learning - Classification
+#### <a name="next_steps_classification">Machine Learning - Classification</a>
 1. Experiment with different distance methods besides Euclidean, which is what Scikit-Learn uses.
 2. Tune the hyperparameters to improve the model performance
 3. Rescale the attributes using StandardScalar.
 
-#### Machine Learning - Regression
+#### <a name="next_steps_regression">Machine Learning - Regression</a>
 * The entire team was curious to know how passenger volumes could be affected during a weather disruption: if it suddenly rains in a summer weekend, would we be able to observe a peak in ridership? To do this analysis, an additional output would be required from the Preparation and Cleaning phase.  We would need to retain the hourly details for both transit and weather and devise a new structure for the analysis.
 * With more granular data, we would also have been able to look at the impact some cultural/social events can have on riderships: Can we predict the peak in riderships the nights the Toronto Raptors are playing?
