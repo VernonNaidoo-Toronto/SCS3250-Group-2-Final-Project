@@ -29,7 +29,7 @@
 
 #### 1: GO Train Rider Volumes
 
-The first dataset was acquired from Metrolinx (operator of GO Transit in Toronto) by a group member. The dataset includes the number of boardings at each hour at each GO Train Station in the network from March 2017 to February 2020. To protect confidentiality, Metrolinx multiplied the data entries by a coefficient. Regardless, trends can still be extracted, analyzed and predicted from this dataset.
+The first dataset was acquired from Metrolinx (operator of GO Transit in Toronto) by a group member. The dataset includes the number of boardings at each hour at each GO Train Station in the network from March 2017 to February 2020. To protect confidentiality, Metrolinx anonymized the data. Regardless, trends can still be extracted, analyzed and predicted from this dataset.
 
 * Source: [Metrolinx](http://www.metrolinx.com/en/)
 * Number of Records: 69,094 (one row per day for each of 68 stations)
@@ -101,15 +101,15 @@ The second dataset is weather data from the Government of Canada (acquired from:
 #### Pros
 
 * kNN works best with a small number of attributes. After analyzing our data and whittling it down to the relevant columns, we had four attributes - weekday, month, delta temperature and delta precipitation - and one target class - ridership. This was ideal for kNN.
-* Knn required a short computation time - we were able to run multiple prediction models very quickly to identify the best k value.
-* Our dataset was already cleansed of all missing values - perfect to work with knn 
+* kNN required a short computation time - we were able to run multiple prediction models very quickly to identify the best k value.
+* Our dataset was already cleansed of all missing values - perfect to work with kNN. 
 * kNN is a non-parametric technique and does not rely on underlyign data distribution; the model is determined solely from data and no assumptions were made. This ensured that the model only used the given data to create its model instead of relying on outside assumptions such as seasonality.
-* To create our models we used the delta temperature and precipitation columns instead of the actual values; this normalized the data to an extent, which helped make the distance metric used by knn more meaningful
+* To create our models we used the delta temperature and precipitation columns instead of the actual values; this normalized the data to an extent, which helped make the distance metric used by knn more meaningful.
 
 #### Cons
 
 * kNN can suffer from skewed class distributions. For example, if a certain class is very frequent in the training set, it will tend to dominate the majority voting of the new example (large number = more common). 
-* The algorithm does not work with categorical features, so all weekdays and months had to be changed to numerical counterparts
+* The algorithm does not work with categorical features, so all weekdays and months had to be changed to numerical counterparts.
 
 #### Summary
 
@@ -119,7 +119,7 @@ One model was used to predict for our test data (June, 2019).  The model was tra
 
 The other model, which was used to predict for a test day (Monday), was trained using ONLY Mondays. The best model we derived for this scenario gave us a score of approximately 62%, which is quite average. Hence, we can conclude that the larger and more varied the dataset, the better the model we can create with kNN. 
 
-### Linear Regression - LW
+### Linear Regression
 
 One of the questions our group wanted to tackle during the analysis was to know if it was possible to predict ridership volume using regression. Would we be able, by taking into account data from 2017 onwards, to predict how many people are likely to take the train in a specific station at a specific day? 
 
@@ -135,7 +135,7 @@ The regression model created was able to predict that there would be a drop in r
 This deeper analysis of the data seemed to demonstrate that the model could be losing predictive accuracy when both weekdays and weekends data was analysed at the same time. Therefore the group decided to look at weekdays and weekends separately.
 
 In the 4th part of the analysis, we started by exploring the correlation between weekday riderships and weekday temperatures. We did not find any clear correlation between those two sets of data. Our conclusion is that it is more than likely that people going to work on weekdays have the same routine and therefore use the same method of transportation regardless of the weather conditions. 
-When we analyzed the data for the weekends, it was clear that there was a positive correlation between weekends temperatures and Go riderships. 
+When we analyzed the data for the weekends, it was clear that there was a positive correlation between weekends temperatures and GO riderships. 
 Using sklearn, the team built a reliable and good model demonstrating that there is an increase of riderships as temperatures arise only during weekends.
 
 
