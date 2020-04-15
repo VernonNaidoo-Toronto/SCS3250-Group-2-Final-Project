@@ -36,9 +36,9 @@ The first dataset was acquired from Metrolinx (operator of GO Transit in Toronto
 * Number of Columns: 26
 * Date Coverage: 2017-03-01 to 2020-02-29 (hourly summaries over a 36 month period)
 * Known Issues: 
-    * In order to maintain confidentiality, the boardings values were altered, while maintaining seasonality and trends.  Since the values provided do not represent the actual number of passengers boarding the trains, all planned analysis tasks were limited to those requiring only **relative** passenger behaviour trends (relative changes over time).  This condition for release of the data was acceptable, as we were not attempting to analyze profitability or tie back to publically released statements.
+    * In order to maintain confidentiality, the boardings values were altered, while maintaining seasonality and trends.  Since the values provided do not represent the actual number of passengers boarding the trains, all planned analysis tasks were limited to those requiring only **relative** passenger behaviour trends (relative changes over time).  This condition for release of the data was acceptable, as we were not attempting to analyze profitability or tie back to publicly released statements.
 * Challenges Encountered:
-    * The shape of the data presented an intial challenge.  It was originally collected with each passenger boarding timestamped and the station of origin identified.  Before it was released to us, the data was summarized into 24 columns, one for each hourly total, and almost 70,000 rows (one row per day for each of 68 stations).
+    * The shape of the data presented an initial challenge.  It was originally collected with each passenger boarding timestamped and the station of origin identified.  Before it was released to us, the data was summarized into 24 columns, one for each hourly total, and almost 70,000 rows (one row per day for each of 68 stations).
 
 #### 2: GO Train Station Details
 
