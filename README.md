@@ -253,17 +253,17 @@ Benefits included:
 
 #### Analysis
 
-1. Correlation and autocorrelation are good tools to help us show the quality and characteristics of data.  They also help to drive the choice of machine learning algorithms to use.
-2. Effective use of the pandas library for building a scatter matrix
-3. Efficient techniques for generating complex statistical analysis visualiations of data, using matplotlib, autocorrelation plots and pcolor pseudocolor plots
-4. Time series analysis, using the autocorrelation function
-5. Visual approaches for using scatter plots to detect and quantify correlations between pairs of time series variables in a matrix
+* Correlation and autocorrelation are good tools to help us show the quality and characteristics of data.  They also help to drive the choice of machine learning algorithms to use.
+* Effective use of the pandas library for building a scatter matrix
+* Efficient techniques for generating complex statistical analysis visualiations of data, using matplotlib, autocorrelation plots and pcolor pseudocolor plots
+* Time series analysis, using the autocorrelation function
+* Visual approaches for using scatter plots to detect and quantify correlations between pairs of time series variables in a matrix
 
 #### Machine Learning - Classification
 
-1. Harness useful pandas libraries like Scikit-Learn to create effective prediction models easily.
-2. Analyzing and experimenting with a given dataset to extract the most relevant and effective columns for a knn predict model.
-3. How to modify a given dataset to ensure it works with a kNN predict model, e.g. categorical values cannot be used as attributes.
+* Harness useful pandas libraries like Scikit-Learn to create effective prediction models easily.
+* Analyzing and experimenting with a given dataset to extract the most relevant and effective columns for a knn predict model.
+* How to modify a given dataset to ensure it works with a kNN predict model, e.g. categorical values cannot be used as attributes.
 #### Machine Learning - Regression
 * Our first model, using only a month of data and without relying on the outliers/holidays (January having 1 bank holiday) was lacking precision. Even though removing outliers/holidays was assiduous, it was essential in order to obtain a better model.
 * When our team started this project, our initial assumption was that ridership during weekdays would be greatly impacted by weather conditions. We assumed that people going to work would adapt their behaviour to the weather, and we were wrong. It was great to see that analyzing data can contradict initial thought and lead to more informed decisions.
@@ -283,9 +283,9 @@ Benefits included:
 * Find a way to identify the exact intersection between the autocorrelation line and the confidence interval boundaries.
 
 #### Machine Learning - Classification
-1. Experiment with different distance methods besides Euclidean, which is what Scikit-Learn uses.
-2. Tune the hyperparameters to improve the model performance.
-3. Rescale the attributes using StandardScalar.
+* Experiment with different distance methods besides Euclidean, which is what Scikit-Learn uses.
+* Tune the hyperparameters to improve the model performance.
+* Rescale the attributes using StandardScalar.
 
 #### Machine Learning - Regression
 * The entire team was curious to know how passenger volumes could be affected during a weather disruption: if it suddenly rains in a summer weekend, would we be able to observe a peak in ridership? To do this analysis, an additional output would be required from the Preparation and Cleaning phase.  We would need to retain the hourly details for both transit and weather and devise a new structure for the analysis.
