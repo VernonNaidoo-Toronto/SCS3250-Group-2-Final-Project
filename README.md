@@ -38,7 +38,7 @@
     * [Lessons Learned](#lessons-learned)
         * [Preparation and Cleaning](#preparation-and-cleaning)
         * [Analysis](#analysis)
-        * [Machine Learning - Classification](#machine-learning---classification-1)
+        * [Machine Learning - Classification](#machine-learning---classification)
         * [Machine Learning - Regression](#machine-learning---regression)
         
     * [Ideas for Further Study / Next Steps](#ideas-for-further-study--next-steps)
