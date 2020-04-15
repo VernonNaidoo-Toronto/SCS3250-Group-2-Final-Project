@@ -18,9 +18,47 @@
 
 ## Introduction
 
-- [ ]   Overview
-- [ ]   Goals
-- [ ]   Hypotheses
+### Overview
+
+The Greater Toronto Area relies on Metrolinx's GO Transit as a major transportation network to move it's population throughout the GTA. The backbone of this network is the GO train system that moves people to and from Union Station in downtown Toronto. In this project, GO train ridership is observed and studied to look for trends, correlations and patterns. With the addition of weather data such as temperature, precipitation and amount of snow in the City of Toronto, the project aims to find the relationship between GO ridership and weather. Using these relationships, the project attempts to build machine learning models that can be used to predict GO ridership using weather.
+
+### Goals
+
+- Combine and clean GO data and weather data
+    - The GO data is in hourly format
+    - The weather data is in daily format
+    - The datasets need to be combined and use the same format
+    - Missing data needs to be addressed
+    - GO data is slightly altered to protect confidentiality
+    - GO data is per station, it should be in per line or overall sum for analysis
+- Identify, explain and handle outliers in GO ridership
+    - Outliers are present in the data that can skew results
+    - Weekends have significantly different trends than weekdays
+    - Holidays affect GO ridership
+    - Major events in Toronto have affects on GO ridership
+    - These outliers need to be addressed before doing analysis
+- Find trends in the GO ridership data
+    - Visualizations will be created to better understand the data and trends
+    - The autocorrelation of the data will be studied
+    - Find trends in time of year and GO ridership
+- Find correlations between the GO ridership data and weather data
+     - Visualizations will be created to better understand the data and trends
+     - Factors that are correlated with each other will be identified  
+- Build machine learning models to predict GO ridership using appropriate methods
+    - Use trends and correlations identified to build machine learning models
+    - Use classification methods to predict range of ridership
+    - Use linear regression methods to predict ridership totals
+
+### Hypotheses
+
+- GO ridership is affected by the day of the week
+    - *Possible weekly cycles of seasonality*
+- The time of year has an impact on GO ridership
+    - *Possible annual cycles of seasonality due to weather and non-business days*
+- The daily temperature has an affect on GO ridership
+    - *Look for correlation between variables*
+- GO ridership can be predicted using weather patterns such as temperature, precipitation and snow
+    - *Potential applications for machine learning* 
 
 ---
 ## Phase 1: Data Preparation and Cleaning
