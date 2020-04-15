@@ -22,7 +22,7 @@
     * [Hypotheses](#hypotheses)
     
 * [Phase 1: Data Preparation and Cleaning](#phase-1-data-preparation-and-cleaning)
-    * [Datasets](#datasets)
+    * [Data Sources](#data-sources)
     * [Task Overview](#task-overview)
     
 * [Phase 2: Analysis](#phase-2-analysis)
@@ -88,7 +88,7 @@ The Greater Toronto Area relies on Metrolinx's GO Transit as a major transportat
     - *Possible weekly cycles of seasonality*
 - The time of year has an impact on GO ridership
     - *Possible annual cycles of seasonality due to weather and non-business days*
-- The daily temperature has an affect on GO ridership
+- The daily temperature has an effect on GO ridership
     - *Look for correlation between variables*
 - GO ridership can be predicted using weather patterns such as temperature, precipitation and snow
     - *Potential applications for machine learning* 
@@ -96,7 +96,7 @@ The Greater Toronto Area relies on Metrolinx's GO Transit as a major transportat
 ---
 ## Phase 1: Data Preparation and Cleaning
 
-### Datasets
+### Data Sources
 
 #### 1: GO Train Rider Volumes
 
@@ -105,7 +105,7 @@ The first dataset was acquired from Metrolinx (operator of GO Transit in Toronto
 * Source: [Metrolinx](http://www.metrolinx.com/en/)
 * Number of Records: 69,094 (one row per day for each of 68 stations)
 * Number of Columns: 26
-* Date Coverage: 2017-03-01 to 2020-02-29 (hourly summaries over a 36 month period)
+* Date Coverage: 2017-03-01 to 2020-02-29 (hourly summaries over a 36-month period)
 * Known Issues: 
     * In order to maintain confidentiality, the boardings values were altered, while maintaining seasonality and trends.  Since the values provided do not represent the actual number of passengers boarding the trains, all planned analysis tasks were limited to those requiring only **relative** passenger behaviour trends (relative changes over time).  This condition for release of the data was acceptable, as we were not attempting to analyze profitability or tie back to publicly released statements.
 * Challenges Encountered:
@@ -165,14 +165,14 @@ Analyzing the relationships among the same variables in different time frames. F
 
 * The primary objective of this part was to understand if there were any association between weather data and ridership. 
 * Our dataset was already cleaned and is extracted outliers and public holidays. 
-* After analyzing our dataset, the most interesting feature is when we can see a positive relationship between the mean temperature and the number of riderships using Union Station just on the weekend, however, there is not any relationship between these two variables on weekdays. 
+* After analyzing our dataset, the most interesting feature is when we can see a positive relationship between the mean temperature and the number of passengers using Union Station just on the weekend, however, there is not any relationship between these two variables on weekdays. 
 * Also, total precipitation and average temperature have weak positive correlations.
  
 ### Autocorrelation
 
-* The primary objective of this part was to understand if there is any pattern in a single variable as it changes over time.
-* Our dataset was already cleaned and is extracted outliers and public holidays. 
-* After analyzing our dataset, the graph shows us that choosing variables are autocorrelated daily but when limiting the time frame as monthly autocorrelation is getting smaller even we can not see any autocorrelation which shows us the choosing variable becomes random.
+* The primary objective is to understand whether patterns exist within a single variable as it changes over time.
+* For input data, the previously cleaned dataset with holidays and outliers identified was used. 
+* After analyzing our dataset, the graph shows us that variables with daily frequency are autocorrelated. However, when selecting monthly summaries, such as monthly mean temperature, the autocorrelation measurement is far below the accepted confidence interval, indicating that no significant autocorrelation can be detected.
 * Also, the graphs show us when time moves further away it can be seen less of autocorrelation.
 
 [ANALYSIS (Jupyter Notebook Link)](https://github.com/Jenarth/SCS3250-Group-2-Final-Project/blob/master/2_Analysis.ipynb)
@@ -182,15 +182,15 @@ Analyzing the relationships among the same variables in different time frames. F
 
 ### Classification, using k-Nearest Neighbours (kNN)
 
-The primary objective of this exercise was to understand if it was possible to identify a pattern between the weather data and daily ridership. Given a day with known weather data, i.e. precipitation, temperature, day and weekday, could we predict the expected ridership on that day? Knn provided us a simple and efficient way to do this prediction.
+The primary objective of this exercise was to understand if it was possible to identify a pattern between the weather data and daily ridership. Given a day with known weather data, i.e. precipitation, temperature, day and weekday, could we predict the expected ridership on that day? kNN provided us a simple and efficient way to do this prediction.
 
 #### Pros
 
 * kNN works best with a small number of attributes. After analyzing our data and whittling it down to the relevant columns, we had four attributes - weekday, month, delta temperature and delta precipitation - and one target class - ridership. This was ideal for kNN.
 * kNN required a short computation time - we were able to run multiple prediction models very quickly to identify the best k value.
 * Our dataset was already cleansed of all missing values - perfect to work with kNN. 
-* kNN is a non-parametric technique and does not rely on underlyign data distribution; the model is determined solely from data and no assumptions were made. This ensured that the model only used the given data to create its model instead of relying on outside assumptions such as seasonality.
-* To create our models we used the delta temperature and precipitation columns instead of the actual values; this normalized the data to an extent, which helped make the distance metric used by knn more meaningful.
+* kNN is a non-parametric technique and does not rely on underlying data distribution; the model is determined solely from data and no assumptions were made. This ensured that the model only used the given data to create its model instead of relying on outside assumptions such as seasonality.
+* To create our models, we used the delta temperature and precipitation columns instead of the actual values; this normalized the data to an extent, which helped make the distance metric used by kNN more meaningful.
 
 #### Cons
 
@@ -209,19 +209,19 @@ The other model, which was used to predict for a test day (Monday), was trained 
 
 One of the questions our group wanted to tackle during the analysis was to know if it was possible to predict ridership volume using regression. Would we be able, by taking into account data from 2017 onwards, to predict how many people are likely to take the train in a specific station at a specific day? 
 
-In the 1st part of our analysis (“Linear Regression with Weekdays - Part 1”), we used the popular machine learning library sklearn to try to predict daily riderships, leaving out weather data and focusing only on past riderships data. By studying the month of January over a period of 3 years, we plotted a model that although it was lacking precision, it already anticipated which days would be busier than others; more specifically Weekdays. 
+In the 1st part of our analysis (“Linear Regression with Weekdays - Part 1”), we used the popular machine learning library sklearn to try to predict daily ridership, leaving out weather data and focusing only on past ridership data. By studying the month of January over a period of 3 years, we plotted a model that although it was lacking precision, it already anticipated which days would be busier than others; more specifically Weekdays. 
 Even though the first model we used offered some insights, it was clear that there was room for a more accurate prediction which we tried to obtain with the second part of our analysis.
 
 In the 2nd part of our analysis (“Linear Regression with Weekdays - Part 2”), our goal was to obtain a more refined model by improving the methodology used in our first analysis. 
 Instead of looking at the month of January only, we decided to work with the data provided for the entire year. We also decided to remove the outliers and the holidays. When we plotted the model, we could observe that we obtained a more accurate prediction using this methodology.
 
 Although the analysis we completed on our second part was satisfactory, we decided to go one step further and create a regression model with two variables: day of the week and weather forecast. The purpose of this was to answer the following question: Can we accurately predict the ridership volume of any given day using the chosen variables?
-The regression model created was able to predict that there would be a drop in ridership during weekends compared to weekdays. However, it was unclear whether the other variable we used, the weather forecast, had an actual impact on the predictions made. 
+The regression model created was able to predict that there would be a drop in weekend ridership compared to weekdays. However, it was unclear whether the other variable we used, the weather forecast, had an actual impact on the predictions made. 
 
-This deeper analysis of the data seemed to demonstrate that the model could be losing predictive accuracy when both weekdays and weekends data was analysed at the same time. Therefore the group decided to look at weekdays and weekends separately.
+This deeper analysis of the data seemed to demonstrate that the model could be losing predictive accuracy when both weekdays and weekends data was analysed at the same time. Therefore, the group decided to look at weekdays and weekends separately.
 
-In the 4th part of the analysis, we started by exploring the correlation between weekday riderships and weekday temperatures. We did not find any clear correlation between those two sets of data. Our conclusion is that it is more than likely that people going to work on weekdays have the same routine and therefore use the same method of transportation regardless of the weather conditions. 
-When we analyzed the data for the weekends, it was clear that there was a positive correlation between weekends temperatures and GO riderships. 
+In the 4th part of the analysis, we started by exploring the correlation between weekday ridership and weekday temperatures. We did not find any clear correlation between those two sets of data. Our conclusion is that it is more than likely that people going to work on weekdays have the same routine and therefore use the same method of transportation regardless of the weather conditions. 
+When we analyzed the data for the weekends, it was clear that there was a positive correlation between weekends temperatures and GO ridership. 
 Using sklearn, the team built a good, reliable model, demonstrating that passenger volumes increase as temperatures rise, but only during weekends.
 
 
@@ -257,26 +257,30 @@ Benefits included:
 #### <a name="lessons_classification">Machine Learning - Classification</a>
 1. Harness useful pandas libraries like Scikit-Learn to create effective prediction models easily.
 2. Analyzing and experimenting with a given dataset to extract the most relevant and effective columns for a knn predict model.
-3. How to modify a given dataset to ensure it works with a knn predict model, e.g. categorical values cannot be used as attributes.
+3. How to modify a given dataset to ensure it works with a kNN predict model, e.g. categorical values cannot be used as attributes.
 #### <a name="lessons_regression">Machine Learning - Regression</a>
 * Our first model, using only a month of data and without relying on the outliers/holidays (January having 1 bank holiday) was lacking precision. Even though removing outliers/holidays was assiduous, it was essential in order to obtain a better model.
-* When our team started this project, our initial assumption was that riderships during weekdays would be greatly impacted by weather conditions. We assumed that people going to work would adapt their behaviour to the weather, and we were wrong. It was great to see that analyzing data can contradict initial thought and lead to more informed decisions.
+* When our team started this project, our initial assumption was that ridership during weekdays would be greatly impacted by weather conditions. We assumed that people going to work would adapt their behaviour to the weather, and we were wrong. It was great to see that analyzing data can contradict initial thought and lead to more informed decisions.
 
 
 ### Ideas for Further Study / Next Steps
 
 #### <a name="next_steps_preparation">Preparation and Cleaning</a>
 * Secure agreement (or employment) with Metrolinx to gain access to unaltered datasets with true values and additional features.
+* Create a second "final" dataset with an alternate shape to enable intraday analysis.  Transit data would need to retain hourly detail.  New weather data files with hourly granularity would need to be sourced.  The analysis would expose an additional level of "hourly seasonality" and enable classification and regression to identify peak periods.
+* Compare actual hourly passenger volumes to **scheduled** train capacity (**planned** arrival times, train length, seat count) to identify service planning optimization opportunities.
+* Comparing actual hourly passenger volumes to **actual** train capacity (**recorded** arrival times, train length, seat count) could reveal opportunities for optimizing service delivery.
 
-
-#### <a name="next_steps_analysis">Analysis - BW/VN</a>
-[TEXT NEEDED]
+#### <a name="next_steps_analysis">Analysis</a>
+* Recreate the autocorrelation analysis from first principles to gain a deeper understanding of the result.
+* Assess the real-world relevance of correlation between variables.  (Why correlate temperature and precipitation?)
+* Find a way to identify the exact intersection between the autocorrelation line and the confidence interval boundaries.
 
 #### <a name="next_steps_classification">Machine Learning - Classification</a>
 1. Experiment with different distance methods besides Euclidean, which is what Scikit-Learn uses.
-2. Tune the hyperparameters to improve the model performance
+2. Tune the hyperparameters to improve the model performance.
 3. Rescale the attributes using StandardScalar.
 
 #### <a name="next_steps_regression">Machine Learning - Regression</a>
 * The entire team was curious to know how passenger volumes could be affected during a weather disruption: if it suddenly rains in a summer weekend, would we be able to observe a peak in ridership? To do this analysis, an additional output would be required from the Preparation and Cleaning phase.  We would need to retain the hourly details for both transit and weather and devise a new structure for the analysis.
-* With more granular data, we would also have been able to look at the impact some cultural/social events can have on riderships: Can we predict the peak in riderships the nights the Toronto Raptors are playing?
+* With more granular data, we would also have been able to look at the impact some cultural/social events can have on passenger volumes: Can we predict the peak in ridership the nights the Toronto Raptors are playing?
