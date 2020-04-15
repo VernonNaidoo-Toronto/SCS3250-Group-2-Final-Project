@@ -147,6 +147,10 @@ The second dataset is weather data from the Government of Canada (acquired from:
     * Merge (boarding and station details) into a single DataFrame.
     * Enhance with new columns for weekdays, monthly means and differences between daily and monthly means for both precipitation and temperature.
     * Identify the categories of outliers: statutory holidays, end of year vacation periods and observations more than two standard deviations away from the mean (calculated separately for weekday subsets to account for seven-day seasonality patterns).
+      * Monday Trend - All Data
+    ![Monday Trend - All Data](https://github.com/Jenarth/SCS3250-Group-2-Final-Project/raw/master/Monday%20trend%20-%20all%20data.png)
+      * Monday Trend - Holidays and Outliers Excluded
+    ![Monday Trend - Holidays and Outliers Excluded](https://github.com/Jenarth/SCS3250-Group-2-Final-Project/raw/master/Monday%20trend%20-%20holidays%20and%20outliers%20removed.png)
 * Weather data files
     * Load, clean, reshape, merge, enhance
 * File merge
