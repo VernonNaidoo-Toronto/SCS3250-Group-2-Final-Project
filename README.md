@@ -196,6 +196,11 @@ Using sklearn, the team built a reliable and good model demonstrating that there
 ### Lessons Learned
 
 #### Preparation and Cleaning
+
+Significant time and effort must be devoted to the work of preparing, cleaning, merging and enhancing the data in advance of further analysis.  Failure to dedicate adequate resources  (early in the project and all the way through) can cause considerable rework and refactoring.  Part way through the project, we came to the realization that each of us had modified the dataset for our own dedicated work (autocorrelation, classification, regression, etc.) in similar ways.  We decided to refactor and standardize the enhancements, such as the addition of new boolean columns for "Holidays" and "Outliers", the consolidation of the 68 train stations into eight train lines and...
+
+The benefits included improved reliability for all downstream analysis, a reduction in the complexity and volume of code and a centralized location for preparation and cleaning.
+
 #### Analysis
 #### Machine Learning - Classification
 1. Harness useful pandas libraries like Scikit-Learn to create effective prediction models easily.
