@@ -119,7 +119,25 @@ One model was used to predict for our test data (June, 2019).  The model was tra
 
 The other model, which was used to predict for a test day (Monday), was trained using ONLY Mondays. The best model we derived for this scenario gave us a score of approximately 62%, which is quite average. Hence, we can conclude that the larger and more varied the dataset, the better the model we can create with kNN. 
 
-### Regression - LW
+### Linear Regression - LW
+
+One of the questions our group wanted to tackle during the analysis was to know if it was possible to predict ridership volume using regression. Would we be able, by taking into account data from 2017 onwards, to predict how many people are likely to take the train in a specific station at a specific day? 
+
+In the 1st part of our analysis (“Linear Regression with Weekdays - Part 1”), we used the popular machine learning library sklearn to try to predict daily riderships, leaving out weather data and focusing only on past riderships data. By studying the month of January over a period of 3 years, we plotted a model that although it was lacking precision, it already anticipated which days would be busier than others; more specifically Weekdays. 
+Even though the first model we used offered some insights, it was clear that there was room for a more accurate prediction which we tried to obtain with the second part of our analysis.
+
+In the 2nd part of our analysis (“Linear Regression with Weekdays - Part 2”), our goal was to obtain a more refined model by improving the methodology used in our first analysis. 
+Instead of looking at the month of January only, we decided to work with the data provided for the entire year. We also decided to remove the outliers and the holidays. When we plotted the model, we could observe that we obtained a more accurate prediction using this methodology.
+
+Although the analysis we completed on our second part was satisfactory, we decided to go one step further and create a regression model with two variables: day of the week and weather forecast. The purpose of this was to answer the following question: Can we accurately predict the ridership volume of any given day using the chosen variables?
+The regression model created was able to predict that there would be a drop in ridership during weekends compared to weekdays. However, it was unclear whether the other variable we used, the weather forecast, had an actual impact on the predictions made. 
+
+This deeper analysis of the data seemed to demonstrate that the model could be losing predictive accuracy when both weekdays and weekends data was analysed at the same time. Therefore the group decided to look at weekdays and weekends separately.
+
+In the 4th part of the analysis, we started by exploring the correlation between weekday riderships and weekday temperatures. We did not find any clear correlation between those two sets of data. Our conclusion is that it is more than likely that people going to work on weekdays have the same routine and therefore use the same method of transportation regardless of the weather conditions. 
+When we analyzed the data for the weekends, it was clear that there was a positive correlation between weekends temperatures and Go riderships. 
+Using sklearn, the team built a reliable and good model demonstrating that there is an increase of riderships as temperatures arise only during weekends.
+
 
 [MACHINE LEARNING (Jupyter Notebook Link)](https://github.com/Jenarth/SCS3250-Group-2-Final-Project/blob/master/3_Machine_Learning.ipynb)
 
