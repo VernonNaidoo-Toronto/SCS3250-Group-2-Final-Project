@@ -148,15 +148,15 @@ The second dataset is weather data from the Government of Canada (acquired from:
     * Enhance with new columns for weekdays, monthly means and differences between daily and monthly means for both precipitation and temperature.
     * Identify the categories of outliers: statutory holidays, end of year vacation periods and observations more than two standard deviations away from the mean (calculated separately for weekday subsets to account for seven-day seasonality patterns).
       * Monday Trend - All Data
-    ![Monday Trend - All Data](https://github.com/Jenarth/SCS3250-Group-2-Final-Project/raw/master/Monday%20trend%20-%20all%20data.png)
+    ![Monday Trend - All Data](https://github.com/VernonNaidoo-Toronto/SCS3250-Group-2-Final-Project/raw/master/Monday%20trend%20-%20all%20data.png)
       * Monday Trend - Holidays and Outliers Excluded
-    ![Monday Trend - Holidays and Outliers Excluded](https://github.com/Jenarth/SCS3250-Group-2-Final-Project/raw/master/Monday%20trend%20-%20holidays%20and%20outliers%20removed.png)
+    ![Monday Trend - Holidays and Outliers Excluded](https://github.com/VernonNaidoo-Toronto/SCS3250-Group-2-Final-Project/raw/master/Monday%20trend%20-%20holidays%20and%20outliers%20removed.png)
 * Weather data files
     * Load, clean, reshape, merge, enhance
 * File merge
     * Merge transit and weather into one consolidated DataFrame; export to csv for analysis and machine learning phases.
 
-[DATA PREPARATION AND CLEANING (Jupyter Notebook Link)](https://github.com/Jenarth/SCS3250-Group-2-Final-Project/blob/master/1_Preparation_and_Cleaning.ipynb)
+[DATA PREPARATION AND CLEANING (Jupyter Notebook Link)](https://github.com/VernonNaidoo-Toronto/SCS3250-Group-2-Final-Project/blob/master/1_Preparation_and_Cleaning.ipynb)
 
 ---
 ## Phase 2: Analysis
@@ -179,7 +179,7 @@ Analyzing the relationships among the same variables in different time frames. F
 * After analyzing our dataset, the graph shows us that variables with daily frequency are autocorrelated. However, when selecting monthly summaries, such as monthly mean temperature, the autocorrelation measurement is far below the accepted confidence interval, indicating that no significant autocorrelation can be detected.
 * Also, the graphs show us when time moves further away it can be seen less of autocorrelation.
 
-[ANALYSIS (Jupyter Notebook Link)](https://github.com/Jenarth/SCS3250-Group-2-Final-Project/blob/master/2_Analysis.ipynb)
+[ANALYSIS (Jupyter Notebook Link)](https://github.com/VernonNaidoo-Toronto/SCS3250-Group-2-Final-Project/blob/master/2_Analysis.ipynb)
 
 ---
 ## Phase 3: Machine Learning
@@ -229,7 +229,7 @@ When we analyzed the data for the weekends, it was clear that there was a positi
 Using sklearn, the team built a good, reliable model, demonstrating that passenger volumes increase as temperatures rise, but only during weekends.
 
 
-[MACHINE LEARNING (Jupyter Notebook Link)](https://github.com/Jenarth/SCS3250-Group-2-Final-Project/blob/master/3_Machine_Learning.ipynb)
+[MACHINE LEARNING (Jupyter Notebook Link)](https://github.com/VernonNaidoo-Toronto/SCS3250-Group-2-Final-Project/blob/master/3_Machine_Learning.ipynb)
 
 ---
 
