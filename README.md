@@ -21,7 +21,7 @@
     * [Goals](#goals)
     * [Hypotheses](#hypotheses)
     
-* [Phase 1: Data Preparation and Cleaning](#phase-1-data-preparation-and-cleaning)
+* [Phase 1: Data Preparation](#phase-1-data-preparation-and-cleaning)
     * [Data Sources](#data-sources)
     * [Task Overview](#task-overview)
     
@@ -36,7 +36,7 @@
     
 * [Conclusion](#conclusion)
     * [Lessons Learned](#lessons-learned)
-        * [Preparation and Cleaning](#preparation-and-cleaning)
+        * [Data Preparation](#preparation-and-cleaning)
         * [Analysis](#analysis)
         * [Machine Learning - Classification](#machine-learning---classification)
         * [Machine Learning - Regression](#machine-learning---regression)
@@ -94,7 +94,7 @@ The Greater Toronto Area relies on Metrolinx's GO Transit as a major transportat
     - *Potential applications for machine learning* 
 
 ---
-## Phase 1: Data Preparation and Cleaning
+## Phase 1: Data Preparation
 
 ### Data Sources
 
@@ -156,7 +156,7 @@ The second dataset is weather data from the Government of Canada (acquired from:
 * File merge
     * Merge transit and weather into one consolidated DataFrame; export to csv for analysis and machine learning phases.
 
-[DATA PREPARATION AND CLEANING (Jupyter Notebook Link)](https://github.com/VernonNaidoo-Toronto/SCS3250-Group-2-Final-Project/blob/master/1_Preparation_and_Cleaning.ipynb)
+[DATA PREPARATION (Jupyter Notebook Link)](https://github.com/VernonNaidoo-Toronto/SCS3250-Group-2-Final-Project/blob/master/1_Preparation_and_Cleaning.ipynb)
 
 ---
 ## Phase 2: Analysis
