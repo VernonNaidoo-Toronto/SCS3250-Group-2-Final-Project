@@ -36,13 +36,13 @@
     
 * [Conclusion](#conclusion)
     * [Lessons Learned](#lessons-learned)
-        * [Data Preparation](#preparation-and-cleaning)
+        * [Data Preparation](#data-preparation)
         * [Analysis](#analysis)
         * [Machine Learning - Classification](#machine-learning---classification)
         * [Machine Learning - Regression](#machine-learning---regression)
         
     * [Ideas for Further Study / Next Steps](#ideas-for-further-study--next-steps)
-        * [Preparation and Cleaning](#preparation-and-cleaning-1)
+        * [Data Preparation](#data-preparation-1)
         * [Analysis](#analysis-1)
         * [Machine Learning - Classification](#machine-learning---classification-1)
         * [Machine Learning - Regression](#machine-learning---regression-1)
@@ -237,7 +237,7 @@ Using sklearn, the team built a good, reliable model, demonstrating that passeng
 
 ### Lessons Learned
 
-#### Preparation and Cleaning
+#### Data Preparation
 
 Significant time and effort must be devoted to the work of preparing, cleaning, merging and enhancing the data in advance of further analysis.  Failure to dedicate adequate resources  (early in the project and all the way through) can cause considerable rework and refactoring.  Part way through the project, we came to the realization that each of us had modified the dataset for our own dedicated work (autocorrelation, classification, regression, etc.) in similar ways.  We agreed to refactor and standardize the enhancements, such as:
 * Addition of "Holidays" boolean column (statutory holidays and common vacation periods)
@@ -271,7 +271,7 @@ Benefits included:
 
 ### Ideas for Further Study / Next Steps
 
-#### Preparation and Cleaning
+#### Data Preparation
 * Secure agreement (or employment) with Metrolinx to gain access to unaltered datasets with true values and additional features.
 * Create a second "final" dataset with an alternate shape to enable intraday analysis.  Transit data would need to retain hourly detail.  New weather data files with hourly granularity would need to be sourced.  The analysis would expose an additional level of "hourly seasonality" and enable classification and regression to identify peak periods.
 * Compare actual hourly passenger volumes to **scheduled** train capacity (**planned** arrival times, train length, seat count) to identify service planning optimization opportunities.
