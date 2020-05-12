@@ -21,7 +21,7 @@
     * [Goals](#goals)
     * [Hypotheses](#hypotheses)
     
-* [Phase 1: Data Preparation](#phase-1-data-preparation-and-cleaning)
+* [Phase 1: Data Preparation](#phase-1-data-preparation)
     * [Data Sources](#data-sources)
     * [Task Overview](#task-overview)
     
